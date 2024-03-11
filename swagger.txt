@@ -1,0 +1,3 @@
+Swagger is a set of open-source tools built around the OpenAPI Specification that can help you design, build, document and consume REST APIs. 
+
+With the OpenAPI Specification, APIs can describe their own structure in a machine-readable format. This means that developers and automated tools can easily understand and interact with the API without needing to read extensive documentation.

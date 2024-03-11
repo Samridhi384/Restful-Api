@@ -1,0 +1,88 @@
+Step 1 : Create a new API
+ Title : OpenAPI Specifications for CMS
+ Description : API Specifications of the project(CMS)
+ Contact : YOURSELF or  CONTACT_INFORMATION or website
+
+
+Step 2 : Identify types of api(public/partner/private)
+public(for OpenAPI)
+
+the APIs can be classified into three broad categories. They are public API partner API and private API. 
+
+The public APIs refers to those APIs that are available on the internet for consumption by any interested company. The scope of such API will be to create integration with related products from a different organization. 
+Let's say your product is about weather forecasting. You can then expose the API about your weather data that can be consumed by clients such as app developers, service providers.
+
+The second category of API refers to partner APIs. As the name suggests, these APIs are used between partners and not exposed in the public domain. 
+They are mainly used for the integration between two organizations within themselves as part of a business plan. If integration is planned between your organization and another company, then it is handled through a partner API.
+
+We have private APIs that refer to those used within a product.
+They are used only within the same product or same organization.
+
+
+2 types of components 
+
+request components :
+1)method : get,post,delete,put 
+
+2)headers:
+meta data of request
+
+3)url : uniquely identify the courses
+
+4)content : body , query parameters
+
+response components
+1)status code : success / failure (200,401 etc)
+
+2)headers : meta data of response
+
+custom headers start with x
+
+3)content : response body
+
+resources of api
+1) need not bsed on physical data
+2) revolve around business identities
+3) should be noun and not verbs
+
+/api/college/10 = college whose id is 10
+
+/api/college/10/students = students of college whose id is 10
+here students are related to college and so they are sub-object of college  
+so this is equal to api/students
+
+put updates an existing resource and if resource does not exist then it will create a new resource
+patch updates partially existing resource 
+
+Idempotency refers to making a multiple identical request to have the same effect as making a single request. that is running single api for 10 times or more.
+get,put,delete supports this while post and patch gurantee not 
+
+They are namely query parameters, path parameters, headers and cookies of request parameters.
+
+http status code
+//request is recieved and response is given 
+200 = ok
+201 = created
+204 = no content
+
+304 = redirected to other method asked for
+
+//client side error
+400 = bad request
+401 = unauthorized
+403 = forbidden
+404 = not found
+405 = method not allowed
+
+//server side error
+500 = internal server error
+501 = not implemented
+
+5 approaches of versioning
+1) no versioning
+2) url versioning
+3) query string versioning
+4) header versioning
+5) media type versioning
+
+best approaches to use is url versioning and query string versioning 
